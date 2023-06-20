@@ -1,0 +1,14 @@
+Circuit sources:
+    ./deps/circomlib/circuits
+    ./deps/aes-circom/circuits
+    ./src/circuits
+
+Python dependencies:
+    - bitstring
+    - secrets
+    - json
+    - sagemath
+    - pycryptodome
+    - binascii
+    - hashlib
+
