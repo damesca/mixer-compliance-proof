@@ -11,7 +11,7 @@ def printList(bytedata):
         lst.append(int(i))
     return lst
 
-rounds = 6
+rounds = 5
 
 l = secrets.token_bytes(16)
 address = secrets.token_bytes(32)

@@ -12,3 +12,19 @@ Python dependencies:
     - binascii
     - hashlib
 
+Tutorial links:
+    - github.com/iden3/snarkjs
+    - docs.circom.io/getting-started/installation/#installing-circom
+
+#########
+# USAGE #
+#########
+
+0. The structure is ./deps for dependencies, ./src for the cryptographic sources (both python and circuits) and ./test to run the executions
+1. Create the folder ./test/ceremonies (you can download a precomputed powersoftau ceremony from the snarkjs tutorial in "github.com/iden3/snarkjs?tab=readme-ov-file#7-prepare-phase-2")
+2. Create the folder ./test/executions/test_compliance and generate a file named input.json
+3. Run the script ./src/crypto-legacy/test_compliance.py or ./src/crypto-legacy/test_compliance_sharing.py to generate a json-formated input of the desired protocol (the parameters can be adjusted inside the python script). Copy the output and paste it inside the previosly generated input.json file
+4. Modify the desired parameters in the circuits in ./src/circuits/tx_compliance.circom or ./src/circuits/tx_compliance_sharing.circom
+5. The executable script to run the tests is ./test/zkproof.sh
+6. For a first run, execute ./zkproof.sh -n name -f path -c ceremony, where name={test_compliance, test_compliance_sharing}, path is the path to the test folder inside ./test/executions and ceremony is the path to the .ptau ceremony file
+7. Additional runs (without modifying the circuit) can be done by executing ./zkproof.sh -n name -f path

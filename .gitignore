@@ -1,3 +1,4 @@
-test/ceremonies
-test/executions
+test/ceremonies/
+test/executions/
 deps/
+src/crypto-legacy/__pycache__

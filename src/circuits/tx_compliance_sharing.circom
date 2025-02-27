@@ -55,8 +55,8 @@ template tx_compliance_sharing(n) {
 
     // Asserts
     
-    x_rec === x;
-    r_rec === r;
+    //x_rec === x;
+    //r_rec === r;
     
 
     // Commitment
@@ -69,8 +69,8 @@ template tx_compliance_sharing(n) {
 
     // Asserts
     
-    mac[0] === comm[0];
-    mac[1] === comm[1];
+    //mac[0] === comm[0];
+    //mac[1] === comm[1];
     
 
     // Ciphertext

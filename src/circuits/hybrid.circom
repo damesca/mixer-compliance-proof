@@ -1,8 +1,8 @@
 pragma circom 2.0.0;
 
-//include "elgamal_hashed.circom";
+include "elgamal_hashed.circom";
 //include "elgamal_hashed_mimc.circom";
-include "elgamal_hashed_poseidon.circom";
+//include "elgamal_hashed_poseidon.circom";
 
 include "aes_256_ecb_encrypt.circom";
 

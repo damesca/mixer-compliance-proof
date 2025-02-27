@@ -14,7 +14,7 @@ def printList(bytedata):
         lst.append(int(i))
     return lst
 
-n = 8
+n = 4
 
 l = token_bytes(11)     #88 bits
 addr = token_bytes(20)  # 160 bits

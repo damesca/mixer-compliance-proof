@@ -6,6 +6,6 @@ do
 	esac
 done
 
-circom $folder/"${name}.circom" --r1cs --wasm -l ~/mixer-compliance/deps/circomlib/circuits/ -l ~/mixer-compliance/deps/aes-circom/circuits/ -l ~/mixer-compliance/src/circuits/
+/home/daniel/.cargo/bin/circom $folder/"${name}.circom" --r1cs --wasm -l /home/daniel/mixer-compliance-proof/deps/circomlib/circuits/ -l /home/daniel/mixer-compliance-proof/deps/aes-circom/circuits/ -l /home/daniel/mixer-compliance-proof/src/circuits/
 node $folder/"${name}_js"/generate_witness.js $folder/"${name}_js"/"${name}.wasm" $folder/input.json $folder/witness.wtns
 snarkjs wtns check $folder/"${name}.r1cs" $folder/witness.wtns
